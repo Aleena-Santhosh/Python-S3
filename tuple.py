@@ -1,0 +1,8 @@
+tuple_list=[(5,2),(1,4),(3,1),(6,3)]
+n=len(tuple_list)
+for i in range(n):
+    for j in range(0,n-i-1):
+        if tuple_list[j][1]>tuple_list[j+1][1]:
+            tuple_list[j],tuple_list[j+1]=tuple_list[j+1],tuple_list[j]
+print("Sorted list based on Second element: ")
+print(tuple_list)

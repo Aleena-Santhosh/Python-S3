@@ -1,0 +1,16 @@
+import turtle
+def draw_petal(t, radius, angle):
+    for _ in range(2):
+        t.circle(radius, angle)
+        t.left(180 - angle)
+num_petals = int(turtle.numinput("Input", "Enter number of petals:", default=6, minval=1, maxval=36))
+wn = turtle.Screen()
+g = turtle.Turtle()
+g.speed(0)
+g.fillcolor("white")
+for _ in range(num_petals):
+    g.begin_fill()
+    draw_petal(g, 100, 100)
+    g.end_fill()
+    g.left(360 / num_petals)
+wn.mainloop()

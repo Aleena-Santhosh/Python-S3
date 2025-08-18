@@ -1,0 +1,21 @@
+import tkinter as tk
+from time import strftime
+def update_time():
+    time_label.config(text=strftime('%H:%M:%S'))
+    day_label.config(text=strftime('%A'))
+    date_label.config(text=strftime('%d %B %Y'))
+    root.after(1000, update_time)
+root = tk.Tk()
+root.title("Fullscreen Clock")
+root.attributes('-fullscreen', True)
+root.configure(bg='white')
+center_frame = tk.Frame(root, bg='white')
+center_frame.place(relx=0.5, rely=0.5, anchor='center')
+time_label = tk.Label(center_frame, font=('Courier', 80), fg='black', bg='white')
+time_label.pack(pady=20)
+day_label = tk.Label(center_frame, font=('Courier', 40), fg='black', bg='white')
+day_label.pack()
+date_label = tk.Label(center_frame, font=('Courier', 40), fg='black', bg='white')
+date_label.pack()
+update_time()
+root.mainloop()

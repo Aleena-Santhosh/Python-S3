@@ -1,0 +1,10 @@
+
+import numpy as np
+
+arr = np.array(list(map(int, input("Enter 9 integers: ").split()))).reshape(3,3)
+print("Original matrix:\n", arr)
+
+one_d = arr.reshape(-1)
+print("1D array:\n", one_d)
+
+print("Flattened back:\n", one_d.reshape(3,3))

@@ -1,0 +1,10 @@
+
+import numpy as np
+print("Enter 9 integers for Matrix 1:")
+m1 = np.array(list(map(int, input().split()))).reshape(3,3)
+print("Enter 9 integers for Matrix 2:")
+m2 = np.array(list(map(int, input().split()))).reshape(3,3)
+print("Matrix 1:\n", m1)
+print("Matrix 2:\n", m2)
+print("Result:")
+print(np.dot(m1, m2))

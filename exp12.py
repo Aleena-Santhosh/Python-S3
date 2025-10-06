@@ -1,0 +1,6 @@
+f1 = open('file1.txt', 'r')
+f2 = open('file2.txt', 'r')
+open('merged_output.txt', 'w').write(f1.read() + '\n' + f2.read())
+f1.close()
+f2.close()
+print("Files merged successfully.")
